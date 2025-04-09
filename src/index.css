@@ -72,7 +72,7 @@ button:focus-visible {
 body {
   margin: 0;
   font-family: sans-serif;
-  height: 100dvh;
+/*   height: 100dvh; */
   background-color: #0f0f0f;
   background-image: url('./assets/bg.jpg');
   background-size: cover;
@@ -80,9 +80,9 @@ body {
   background-repeat: no-repeat;
 
 
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+/*   padding: 40px; */
+/*   border-radius: 20px; */
+/*   box-shadow: 0 10px 20px rgba(0,0,0,0.2); */
 }
 
 div {
