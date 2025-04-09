@@ -118,8 +118,8 @@ div {
 
 
 .background-box {
-  width: 75vh;
-  height: 50vh;
+  width: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
