@@ -45,9 +45,8 @@ const CountdownTimer = ({ initialSeconds }) => {
       {showButton && !showMessage && (
         <button
           onClick={handleReveal}
-          className="reveal-button"
-        >
-          Reveal<br /> 👦 Or 👧
+          className="reveal-button">
+          Reveal<br /> 👦 / 👧
         </button>
       )}
 

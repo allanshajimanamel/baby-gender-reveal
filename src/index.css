@@ -196,22 +196,4 @@ div {
   text-decoration: underline;
 }
 
-@media (max-width: 480px) {
-  .reveal-button {
-    ffont-size: 8px;
-  }
-}
 
-/* Medium devices (tablets) */
-@media (min-width: 768px) {
-  .reveal-button {
-    ffont-size: 16px;
-  }
-}
-
-/* Large devices (desktops) */
-@media (min-width: 1024px) {
-  .reveal-button {
-    ffont-size: 32px;
-  }
-}
