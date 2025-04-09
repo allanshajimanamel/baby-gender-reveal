@@ -84,7 +84,7 @@ div {
 }
      
 .app-container {
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,21 +95,21 @@ div {
 /* Very small screen (extra small devices like phones in portrait mode) */
 @media (max-width: 480px) {
     .app-container {
-    width: 25%;
+    width: 100%;
   }
 }
 
 /* Medium devices (tablets) */
 @media (min-width: 768px) {
   .app-container {
-    width: 50%;
+    width: 100%;
   }
 }
 
 /* Large devices (desktops) */
 @media (min-width: 1024px) {
   .app-container {
-    width: 75%;
+    width: 100%;
   }
 }
 
@@ -154,14 +154,14 @@ div {
 .countdown-text {
   font-size: 72px; /* or use 5rem, etc. */
   font-weight: bold;
-  color: #2563eb; /* Tailwind's blue-600 */
+  color: #4c0b7d; /* Tailwind's blue-600 */
 }
 
 @media (max-width: 480px) {
   .countdown-text {
     font-size: 36px; /* or use 5rem, etc. */
   	font-weight: bold;
-  	color: #2563eb; /* Tailwind's blue-600 */
+  	color: #4c0b7d; /* Tailwind's blue-600 */
   }
 }
 
@@ -170,7 +170,7 @@ div {
   .countdown-text {
     font-size: 72px; /* or use 5rem, etc. */
   	font-weight: bold;
-  	color: #2563eb; /* Tailwind's blue-600 */
+  	color: #4c0b7d; /* Tailwind's blue-600 */
   }
 }
 
@@ -186,14 +186,85 @@ div {
 .reveal-button {
   background: none;
   border: none;
-  font-size: 32px; /* or 32px */
-  font-weight: bold;
-  color: #e81b0c; /* Tailwind pink-600 */
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem; 
+  font-weight: 900;
+  color: #000000; 
   cursor: pointer;
+/*   white-space: nowrap; */
 }
 
 .reveal-button:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 480px) {
+  .reveal-button {
+    background: none;
+  	border: none;
+  	font-family: 'Dancing Script', cursive;
+  	font-size: 1rem; 
+  	font-weight: 900;
+  	color: #000000; 
+  	cursor: pointer;
+  	white-space: nowrap;
+  }
+  .reveal-button-small {
+  	font-size: 1rem;
+  }
+  .reveal-button-large {
+  	font-size: 2rem;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) {
+  .reveal-button {
+    background: none;
+  	border: none;
+  	font-family: 'Dancing Script', cursive;
+  	font-size: 3rem; 
+  	font-weight: 900;
+  	color: #000000; 
+  	cursor: pointer;
+  	white-space: nowrap;
+  }
+  .reveal-button-small {
+  	font-size: 2rem;
+  }
+  .reveal-button-large {
+  	font-size: 3rem;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 1024px) {
+  .reveal-button {
+    background: none;
+  	border: none;
+  	font-family: 'Dancing Script', cursive;
+  	font-size: 4rem; 
+  	font-weight: 900;
+  	color: #000000; 
+  	cursor: pointer;
+  	white-space: nowrap;
+  }
+  .reveal-button-small {
+  	font-size: 2.5rem;
+  }
+  .reveal-button-large {
+  	font-size: 4rem;
+  }
+}
+
+/* 
+.reveal-button-small {
+  font-size: 1rem;
+}
+
+.reveal-button-large {
+  font-size: 2rem;
+}
+ */
 
 

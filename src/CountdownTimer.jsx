@@ -5,6 +5,7 @@ const CountdownTimer = ({ initialSeconds }) => {
   const [showButton, setShowButton] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [message, setMessage] = useState("Allan & Annie Baby");
+  const [buttonText, setButtonText] = useState("WATCHA THINK");
 
   // Countdown logic
   useEffect(() => {
@@ -34,6 +35,16 @@ const CountdownTimer = ({ initialSeconds }) => {
     setMessage("It's a Boy! 🎉");
   };
 
+  // Button text change after 2 seconds
+  useEffect(() => {
+    if (showButton) {
+      const textTimer = setTimeout(() => {
+        setButtonText("👦 Or 👧");
+      }, 2000);
+      return () => clearTimeout(textTimer);
+    }
+  }, [showButton]);
+
   return (
     <div className="text-center item-center">
       {secondsLeft > 0 && (
@@ -44,17 +55,15 @@ const CountdownTimer = ({ initialSeconds }) => {
 
       {showButton && !showMessage && (
         <button
-          onClick={handleReveal}
-          className="reveal-button">
-          Reveal<br /> 👦 / 👧
+        onClick={handleReveal}
+        className={`reveal-button`}>
+        <span className={`${buttonText === "WATCHA THINK" ? "reveal-button-small" : "reveal-button-large"}`}>{buttonText}</span>
+        {/* {buttonText} */}
         </button>
       )}
 
       {showMessage && (
         <div>
-          {/* <h2 className="text-5xl font-bold text-red-600 font-serif">🎉 Welcome</h2>
-          <br />
-          <h2 className="text-8xl font-bold text-red-600"> Harvey Theo Manamel</h2> */}
         </div>
       )}
     </div>
