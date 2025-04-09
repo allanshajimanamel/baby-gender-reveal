@@ -27,7 +27,7 @@ const CountdownTimer = ({ initialSeconds }) => {
     setShowMessage(true);
     setShowButton(false);
     document.body.style.backgroundImage = "url('/reveal.jpg')";
-    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundSize = "contain";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.transition = "background 1s ease";
@@ -35,7 +35,7 @@ const CountdownTimer = ({ initialSeconds }) => {
   };
 
   return (
-    <div className="text-center space-y-4">
+    <div className="text-center item-center">
       {secondsLeft > 0 && (
         <h1 className="countdown-text text-100xl font-bold text-blue-600">
           {secondsLeft}
@@ -53,9 +53,9 @@ const CountdownTimer = ({ initialSeconds }) => {
 
       {showMessage && (
         <div>
-          <h2 className="text-5xl font-bold text-red-600 font-serif">🎉 Welcome</h2>
+          {/* <h2 className="text-5xl font-bold text-red-600 font-serif">🎉 Welcome</h2>
           <br />
-          <h2 className="text-8xl font-bold text-red-600"> Harvey Theo Manamel</h2>
+          <h2 className="text-8xl font-bold text-red-600"> Harvey Theo Manamel</h2> */}
         </div>
       )}
     </div>
