@@ -6,6 +6,9 @@ const CountdownTimer = ({ initialSeconds }) => {
   const [showMessage, setShowMessage] = useState(false);
   const [message, setMessage] = useState("Allan & Annie Baby");
   const [buttonText, setButtonText] = useState("WATCHA THINK");
+  const [messageReady, setMessageReady] = useState(false);
+  const [nameReveal, setnameReveal] = useState("Do you want to know what my mom and dad call me?");
+  const [welcome, setWelcome] = useState("");
 
   // Countdown logic
   useEffect(() => {
@@ -33,6 +36,17 @@ const CountdownTimer = ({ initialSeconds }) => {
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.transition = "background 1s ease";
     setMessage("It's a Boy! 🎉");
+    setTimeout(() => {
+      setMessageReady(true);
+    }, 4000);
+  };
+
+  const handleNameReveal = () => {
+    setShowMessage(true);
+    setShowButton(false);
+    setMessageReady(true)
+    setnameReveal("HARVEY THEO MANAMEL")
+    setWelcome("Welcome")
   };
 
   // Button text change after 2 seconds
@@ -58,13 +72,16 @@ const CountdownTimer = ({ initialSeconds }) => {
         onClick={handleReveal}
         className={`reveal-button`}>
         <span className={`${buttonText === "WATCHA THINK" ? "reveal-button-small" : "reveal-button-large"}`}>{buttonText}</span>
-        {/* {buttonText} */}
         </button>
       )}
 
-      {showMessage && (
-        <div>
-        </div>
+      {showMessage && messageReady && (
+        <button
+        onClick={handleNameReveal}
+        className={`reveal-name`}>
+          <span>{welcome}</span><br />
+          <span>{nameReveal}</span>
+        </button>
       )}
     </div>
   );

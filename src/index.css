@@ -191,7 +191,7 @@ div {
   font-weight: 900;
   color: #000000; 
   cursor: pointer;
-/*   white-space: nowrap; */
+  white-space: nowrap;
 }
 
 .reveal-button:hover {
@@ -257,14 +257,58 @@ div {
   }
 }
 
-/* 
-.reveal-button-small {
-  font-size: 1rem;
+.reveal-name {
+  background: none;
+  border: none;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1rem; 
+  font-weight: 900;
+  color: #000000; 
+  cursor: pointer;
+  white-space: pre-wrap;
 }
 
-.reveal-button-large {
-  font-size: 2rem;
+.reveal-name:hover {
+  text-decoration: underline;
 }
- */
 
+@media (max-width: 480px) {
+  .reveal-name {
+    background: none;
+  	border: none;
+  	font-family: 'Dancing Script', cursive;
+  	font-size: 1rem; 
+  	font-weight: 900;
+  	color: #000000; 
+  	cursor: pointer;
+  	white-space: pre-wrap;
+  }
+}
 
+/* Medium devices (tablets) */
+@media (min-width: 768px) {
+  .reveal-name {
+    background: none;
+  	border: none;
+  	font-family: 'Dancing Script', cursive;
+  	font-size: 3rem; 
+  	font-weight: 900;
+  	color: #000000; 
+  	cursor: pointer;
+  	white-space: pre-wrap;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 1024px) {
+  .reveal-name {
+    background: none;
+  	border: none;
+  	font-family: 'Dancing Script', cursive;
+  	font-size: 4rem; 
+  	font-weight: 900;
+  	color: #000000; 
+  	cursor: pointer;
+  	white-space: pre-wrap;
+  }
+}
