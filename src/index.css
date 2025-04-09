@@ -72,17 +72,11 @@ button:focus-visible {
 body {
   margin: 0;
   font-family: sans-serif;
-/*   height: 100dvh; */
   background-color: #0f0f0f;
   background-image: url('./assets/bg.jpg');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-
-
-/*   padding: 40px; */
-/*   border-radius: 20px; */
-/*   box-shadow: 0 10px 20px rgba(0,0,0,0.2); */
 }
 
 div {
@@ -91,20 +85,24 @@ div {
      
 .app-container {
   height: 100vh;
-/*   width: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-/*   padding: 20px; */
   margin: auto;
+}
+
+/* Very small screen (extra small devices like phones in portrait mode) */
+@media (max-width: 480px) {
+    .app-container {
+    width: 25%;
+  }
 }
 
 /* Medium devices (tablets) */
 @media (min-width: 768px) {
   .app-container {
-    width: 45%;
-/*     padding: 40px; */
+    width: 50%;
   }
 }
 
@@ -112,39 +110,44 @@ div {
 @media (min-width: 1024px) {
   .app-container {
     width: 75%;
-/*     padding: 60px; */
   }
 }
 
-
 .background-box {
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Very small screen (extra small devices like phones in portrait mode) */
+@media (max-width: 480px) {
+  .background-box {
+    width: 25vw;
+  	height: 25vh;
+  }
+}
+
 @media (max-width: 768px) {
   .background-box {
-    flex-direction: column;
+/*     flex-direction: column; */
+    width: 45vw;
+  	height: 45vh;
   }
+}
 
-  .button {
-    font-size: 18px;
-    width: 100%;
+@media (min-width: 1024px) {
+  .background-box {
+    width: 75%;
   }
 }
 
 /* Very small screen (extra small devices like phones in portrait mode) */
 @media (max-width: 480px) {
   .background-box {
-    width: 45vh;
+    width: 45vw;
   	height: 45vh;
-  }
-
-  .button {
-    font-size: 16px;
   }
 }
 
@@ -152,6 +155,14 @@ div {
   font-size: 72px; /* or use 5rem, etc. */
   font-weight: bold;
   color: #2563eb; /* Tailwind's blue-600 */
+}
+
+@media (max-width: 480px) {
+  .countdown-text {
+    font-size: 36px; /* or use 5rem, etc. */
+  	font-weight: bold;
+  	color: #2563eb; /* Tailwind's blue-600 */
+  }
 }
 
 /* Medium devices (tablets) */
