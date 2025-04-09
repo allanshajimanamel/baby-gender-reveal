@@ -103,7 +103,7 @@ div {
 /* Medium devices (tablets) */
 @media (min-width: 768px) {
   .app-container {
-    width: 70%;
+    width: 45%;
     padding: 40px;
   }
 }
@@ -123,6 +123,29 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .background-box {
+    flex-direction: column;
+  }
+
+  .button {
+    font-size: 18px;
+    width: 100%;
+  }
+}
+
+/* Very small screen (extra small devices like phones in portrait mode) */
+@media (max-width: 480px) {
+  .background-box {
+    width: 45vh;
+  	height: 45vh;
+  }
+
+  .button {
+    font-size: 16px;
+  }
 }
 
 .countdown-text {
