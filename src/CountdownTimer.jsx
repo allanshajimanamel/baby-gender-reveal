@@ -5,10 +5,11 @@ const CountdownTimer = ({ initialSeconds }) => {
   const [showButton, setShowButton] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [message, setMessage] = useState("Allan & Annie Baby");
-  const [buttonText, setButtonText] = useState("WATCHA THINK");
+  const [buttonText, setButtonText] = useState("WATCHA 🤔");
   const [messageReady, setMessageReady] = useState(false);
-  const [nameReveal, setnameReveal] = useState("Do you want to know what my mom and dad call me?");
+  const [nameReveal, setnameReveal] = useState("Want to know what mom and dad named me?");
   const [welcome, setWelcome] = useState("");
+  const [revealNameClicked, setRevealNameClicked] = useState(false);
 
   // Countdown logic
   useEffect(() => {
@@ -46,7 +47,8 @@ const CountdownTimer = ({ initialSeconds }) => {
     setShowButton(false);
     setMessageReady(true)
     setnameReveal("HARVEY THEO MANAMEL")
-    setWelcome("Welcome")
+    setWelcome("🥳")
+    setRevealNameClicked(true)
   };
 
   // Button text change after 2 seconds
@@ -54,10 +56,29 @@ const CountdownTimer = ({ initialSeconds }) => {
     if (showButton) {
       const textTimer = setTimeout(() => {
         setButtonText("👦 Or 👧");
-      }, 2000);
+      }, 3000);
       return () => clearTimeout(textTimer);
     }
   }, [showButton]);
+
+  const getButtonContent = () => {
+    if(revealNameClicked) {
+      return (
+        <>
+          <span>{welcome}</span><br />
+          <span>{nameReveal}</span>
+        </>
+      );
+    }
+    if(!revealNameClicked) {
+      return (
+        <>
+          <span>{nameReveal}</span>
+        </>
+      );
+    }
+  };
+  
 
   return (
     <div className="text-center item-center">
@@ -71,7 +92,7 @@ const CountdownTimer = ({ initialSeconds }) => {
         <button
         onClick={handleReveal}
         className={`reveal-button`}>
-        <span className={`${buttonText === "WATCHA THINK" ? "reveal-button-small" : "reveal-button-large"}`}>{buttonText}</span>
+        <span className={`${buttonText === "WATCHA 🤔" ? "reveal-button-small" : "reveal-button-large"}`}>{buttonText}</span>
         </button>
       )}
 
@@ -79,8 +100,7 @@ const CountdownTimer = ({ initialSeconds }) => {
         <button
         onClick={handleNameReveal}
         className={`reveal-name`}>
-          <span>{welcome}</span><br />
-          <span>{nameReveal}</span>
+          {getButtonContent()}
         </button>
       )}
     </div>

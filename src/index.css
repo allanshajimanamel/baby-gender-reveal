@@ -179,14 +179,14 @@ div {
   .countdown-text {
     font-size: 144px; /* or use 5rem, etc. */
   	font-weight: bold;
-  	color: #2563eb; /* Tailwind's blue-600 */
+  	color: #4c0b7d; /* Tailwind's blue-600 */
   }
 }
 
 .reveal-button {
   background: none;
   border: none;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Comic Sans', cursive;
   font-size: 4rem; 
   font-weight: 900;
   color: #000000; 
@@ -202,7 +202,7 @@ div {
   .reveal-button {
     background: none;
   	border: none;
-  	font-family: 'Dancing Script', cursive;
+  	font-family: 'Comic Sans';
   	font-size: 1rem; 
   	font-weight: 900;
   	color: #000000; 
@@ -210,7 +210,7 @@ div {
   	white-space: nowrap;
   }
   .reveal-button-small {
-  	font-size: 1rem;
+  	font-size: 1.5rem;
   }
   .reveal-button-large {
   	font-size: 2rem;
@@ -222,7 +222,7 @@ div {
   .reveal-button {
     background: none;
   	border: none;
-  	font-family: 'Dancing Script', cursive;
+  	font-family: 'Comic Sans', cursive;
   	font-size: 3rem; 
   	font-weight: 900;
   	color: #000000; 
@@ -258,9 +258,9 @@ div {
 }
 
 .reveal-name {
-  background: none;
+  background: azure;
   border: none;
-  font-family: 'Dancing Script', cursive;
+/*   font-family: 'Dancing Script', cursive; */
   font-size: 1rem; 
   font-weight: 900;
   color: #000000; 
@@ -268,15 +268,17 @@ div {
   white-space: pre-wrap;
 }
 
+/* 
 .reveal-name:hover {
   text-decoration: underline;
 }
+ */
 
 @media (max-width: 480px) {
   .reveal-name {
-    background: none;
+    background: azure;
   	border: none;
-  	font-family: 'Dancing Script', cursive;
+/*   	font-family: 'Dancing Script', cursive; */
   	font-size: 1rem; 
   	font-weight: 900;
   	color: #000000; 
@@ -288,9 +290,9 @@ div {
 /* Medium devices (tablets) */
 @media (min-width: 768px) {
   .reveal-name {
-    background: none;
+    background: azure;
   	border: none;
-  	font-family: 'Dancing Script', cursive;
+/*   	font-family: 'Dancing Script', cursive; */
   	font-size: 3rem; 
   	font-weight: 900;
   	color: #000000; 
@@ -302,7 +304,7 @@ div {
 /* Large devices (desktops) */
 @media (min-width: 1024px) {
   .reveal-name {
-    background: none;
+    background: azure;
   	border: none;
   	font-family: 'Dancing Script', cursive;
   	font-size: 4rem; 
